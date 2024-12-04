@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and external stylesheet links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800">
+    <title>Responsive Navbar</title>
+    <!-- Link to external stylesheet for custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <!-- Logo section of the navigation bar -->
+        <div class="logo">
+            <!-- The logo text, with different colors applied to "VIVEK" and "PORTFOLIO" -->
+            <span style="color: #f9af03;">&lt;/ VIVEK</span><br> <span style="color: #f9af03;">PORTFOLIO &gt;</span>
+        </div>
+        <!-- Menu toggle button for smaller screens -->
+        <div class="menu-toggle" id="menuToggle">
+            <!-- Icon for the menu toggle (hamburger menu) -->
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Navigation links -->
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <!-- Navigation items with icons for each section -->
+                <li><a onclick="showSection('home')"><i class="fas fa-home"></i></a></li>
+                <li><a onclick="showSection('about')">ABOUT</a></li>
+                <li><a onclick="showSection('skills')">SKILLS</a></li>
+                <li><a onclick="showSection('contact')">CONTACT</a></li>
+                <!-- Dark mode toggle button -->
+                <li><a id="darkModeToggle"><i class="fas fa-moon"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sections of the website corresponding to the navigation links -->
+        <div id="homeContent" class="section">
+            <h1><span style="color: #6a11cb;">HEY,👋<br> IT'S VIVEK SAWJI</h1></span>
+            <div id="pp">
+                <img src="teacher-man-avatar-icon-illustration-vector-style_131965-958.avif" alt="Avatar">
+            <b>
+            </div>
+            <h3>
+                <div class="output" id="output"></div>
+            </h3>
+            
+        </b>
+                
+                
+    
+            <div class="welcome-message">
+                <h2>WELCOME TO MY PORTFOLIO!</h2>
+                <h4>
+                    <p>~"I'm passionate about turning ideas into reality through code".
+                        Let's build something amazing together!~</p>
+                </h4>
+                </div>
+                <div class="thought">
+                
+                    <p>"Code is like humor. When you have to explain it, it’s bad." </p>
+                                                        <P>- Cory House</p><BR>
+                </div>
+            
+           
+                <div class="specialties">
+                <h2>MY SPECIALTIES</h2>
+                <div id="github">
+                    <img src="python-svgrepo-com.svg" alt="python">
+                    <img src="java-4-logo-svgrepo-com.svg" alt="java">
+                    <img src="c-logo-svgrepo-com.svg" alt="c++">
+                    <img src="html-5-logo-svgrepo-com.svg" alt="html">
+                    <img src="css3-logo-svgrepo-com.svg" alt="css">
+                    <img src="javascript-logo-svgrepo-com.svg" alt="javascript">
+                    <img src="mysql-logo-svgrepo-com.svg" alt="sql">
+                </div>
+                </div>
+                </div>
+           
+                <button class="Btn" id="scrollToTop">
+                    <svg height="1.5cm" width="1.5cm" class="arrow" viewBox="0 0 512 512">
+                      <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+                    </svg>
+                    <span class="tooltip">Back to Top</span>
+                    <style>
+                        /* Scroll-to-Top Button */
+                        .Btn {
+                          width: 110px; /* Increase button size for the larger arrow */
+                          height: 110px;
+                          background: linear-gradient( #6a11cb, #2575fc);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          border-radius: 50%;
+                          cursor: pointer;
+                          position: fixed;
+                          bottom: 20px;
+                          right: 20px;
+                          border: none;
+                          display: none; /* Initially hidden */
+                          z-index: 1000;
+                        }
+                        
+                        .arrow path {
+                          fill: white;
+                        }
+                        
+                        /* Tooltip styling */
+                        .tooltip {
+                          position: absolute;
+                          bottom: 170px; /* Adjust for the larger button */
+                          background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+                          color: white;
+                          padding: 15px 10px;
+                          border-radius: 115px;
+                          font-size: 0.8em;
+                          white-space: nowrap;
+                          opacity: 0;
+                          visibility: hidden;
+                          transition: opacity 0.3s, visibility 0.3s;
+                        }
+                        
+                        .Btn:hover .tooltip {
+                          opacity: 1;
+                          visibility: visible;
+                        }
+                        
+                        .Btn:hover .arrow {
+                          animation: slide-in-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+                        }
+                        
+                        @keyframes slide-in-bottom {
+                          0% {
+                            transform: translateY(10px);
+                            opacity: 0;
+                          }
+                          100% {
+                            transform: translateY(0);
+                            opacity: 1;
+                          }
+                        }
+                        </style>
+                  </button>              
+<div id="about" class="section">
+        <h2>ABOUT ME </h2>
+        <div class="section-content">
+            <h3>INTRODUCTION</h3>
+            <p>I am Vivek Sawji, a dedicated and passionate developer with a keen interest in creating efficient and scalable solutions. With a strong foundation in computer science, I continuously strive to expand my knowledge and skills.</p>
+
+            <h3>PROFESSIONAL DETAILS</h3>
+            <p>I have experience in developing web applications using modern technologies and frameworks. My expertise lies in backend development, but I am also proficient in frontend technologies, enabling me to build full-stack applications.</p>
+
+            <h3>PERSONAL DETAILS</h3>
+            <p>Outside of coding, I enjoy playing game, traveling, and exploring new technologies. I believe in lifelong learning and am always eager to take on new challenges.</p>
+
+            <h3>EDUCTION</h3>
+            <p>Bachelor of science in Computer Science - Mumbai University</p>
+
+            <h3>EXPERIENCE</h3>
+            <p>Worked on various projects spanning over 3-4 months, including internships and freelance work.</p>
+
+            <h3>PROJECTS</h3><br>
+            <P>1.STONE,PAPER,SICSSOR & GUESS THE NUMBER</P>
+            <a href="https://vivekx11.github.io/GameSpace/" target="_blank">
+                <button> GAME_SPACE
+                </button>
+            </a>
+<P>2.WATER TESTING WEBPAGE(FRONTEND)</P>
+<a href="https://viveks2907.github.io/WT.frontend./" target="_blank">
+    <button> WATER TESTING
+    </button>
+</a>
+<P>3.MEMORYGAME</P>
+<a href="https://vivekx11.github.io/memorygame/" target="_blank">
+    <button> MEMORYGAME
+    </button>
+</a>
+</div>
+</div>
+
+
+<div id="skills" class="section">
+    <h2>SKILLS</h2>
+
+    <div class="skills-row">
+        <img src="python-svgrepo-com.svg" alt="Python" class="skill-image">
+        <div class="skill-detail">
+            <h3>Python</h3>
+            <p>Python is a versatile programming language used for web development, AI, and more.</p>
+        </div>
+    </div>
+
+    <div class="skills-row reverse">
+        <div class="skill-detail">
+            <h3>Java</h3>
+            <p>Java is a powerful language for building platform-independent applications.</p>
+        </div>
+        <img src="java-4-logo-svgrepo-com.svg" alt="Java" class="skill-image">
+    </div>
+
+    <div class="skills-row">
+        <img src="c-logo-svgrepo-com.svg" alt="C++" class="skill-image">
+        <div class="skill-detail">
+            <h3>C++</h3>
+            <p>C++ is widely used for competitive programming and game development.</p>
+        </div>
+    </div>
+
+    <div class="skills-row reverse">
+        <div class="skill-detail">
+            <h3>HTML & CSS</h3>
+            <p>HTML and CSS are foundational for creating structured and visually appealing websites.</p>
+        </div>
+        <img src="html-5-logo-svgrepo-com.svg" alt="HTML" class="skill-image">
+    </div>
+
+    <!-- Add more rows as needed -->
+</div>
+
+                    <!-- Container for images -->
+
+
+        <div id="contact" class="section">
+            <h2>CONTACT ME</h2>
+            <div class="section-content">
+                <form action="https://getform.io/f/bmddyxna" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+            </div>
+            <div class="social-menu">
+                <ul>
+                    <li>
+                        <a href="https://github.com/vivekx11" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/vivekx___" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:viveksawji@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/viveksawji" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        <b><DIV>
+            <p>&copy; 2024 Vivek Sawji. All Rights Reserved.</p>
+            <p>Create by viveksawji</p>
+        </DIV>
+    </b>
+    
+    </div>
+    </div>
+    </div>
+    
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+<!-- Embedded CSS for styling the webpage -->
+<style>
+    /* General Styles */
+/* Universal Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(to bottom right, #f0f0f0, #e6e6e6);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(to bottom right, #121212, #1e1e1e);
+    color: #e0e0e0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links ul li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+    border-radius: 10px;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+body.dark-mode .section {
+    background: linear-gradient(to bottom right, #2b2b2b, #3a3a3a);
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #6a11cb;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+body.dark-mode .section p {
+    color: #ccc;
+}
+
+/* Home Section */
+
+#homeContent h1 {
+    font-size: 3rem;
+    color: #2575fc;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+}
+
+#homeContent img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1rem 0;
+    border: 5px solid #6a11cb;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-message h4 {
+    font-style: italic;
+    color: #666;
+}
+
+.thought p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Skills Section */
+/* Skills Section */
+#skills {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6a1b9a;
+    margin-bottom: 2rem;
+}
+
+/* Skills Row */
+.skills-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skills-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Skill Images */
+.skill-image {
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Details */
+.skill-detail {
+    width: 50%;
+}
+
+.skill-detail h3 {
+    font-size: 1.8rem;
+    color: #6a1b9a;
+    margin-bottom: 1rem;
+}
+
+.skill-detail p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+/* Dark Mode */
+body.dark-mode #skills {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode #skills h2 {
+    color: #bb86fc;
+}
+
+body.dark-mode .skill-detail h3 {
+    color: #bb86fc;
+}
+
+body.dark-mode .skill-detail p {
+    color: #b0bec5;
+}
+
+body.dark-mode .skill-image {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-row.reverse {
+        flex-direction: column;
+    }
+
+    .skill-image, .skill-detail {
+        width: 100%;
+    }
+}
+
+/* Contact Section */
+#contact form {
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #contact form {
+    background: #333;
+    box-shadow: none;
+}
+
+#contact form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+body.dark-mode #contact form input, body.dark-mode #contact form textarea {
+    border: 2px solid #555;
+    background: #444;
+    color: #eee;
+}
+
+#contact form input[type="submit"] {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#contact form input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+/* Social Menu */
+.social-menu ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    list-style: none;
+}
+
+.social-menu ul li {
+    margin: 0 1rem;
+}
+
+.social-menu ul li a {
+    color: #6a11cb;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-menu ul li a:hover {
+    transform: scale(1.2);
+    color: #2575fc;
+}
+
+/* Footer */
+div b p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 1rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-links ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active + .nav-links ul {
+        display: flex;
+    }
+
+    .skills-column {
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+}
+.output {
+    min-height: 50px; /* Adjust the height based on your design */
+    display: block;
+    font-size: 7.0mm;
+    
+     /* Keep the space occupied, but hide the content */
+}
+
+
+
+
+
+
+</style>
+    
+<script>
+    /* Get references to DOM elements */
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const nav = document.querySelector('nav');
+
+    /* Toggle the navigation menu when the menu toggle button is clicked*/ 
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    /* Toggle dark mode when the dark mode toggle button is clicked */
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        nav.classList.toggle('dark-mode');
+    });
+
+    /*Smooth scroll to the corresponding section when a navigation link is clicked */
+    function showSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+    const alphabet = "QWERTYUIOPLKJHGFDSAZXCVBNM";
+    const sentences = [
+        "PYTHON DEVLOPER",
+        "JAVA DEVLOPER",
+        "FRONTEND DEVLOPER",
+        "BACKEND DEVLOPER",
+        "STUDENT"
+    ];
+    let store = "";
+    let delay = 25; // Time delay between each step in milliseconds
+    let eraseDelay = 50; // Time delay for erasing each character
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function matchLetter(targetLetter) {
+        let outputDiv = document.getElementById('output');
+
+        for (let i = 0; i < alphabet.length; i++) {
+            await sleep(delay); // Add delay for each step
+            outputDiv.innerText = store + alphabet[i]; // Show the current letter being checked
+            
+            if (alphabet[i] === targetLetter) {
+                store += alphabet[i]; // Add the correct letter to store
+                break; // Stop the loop once the correct letter is found
+            }
+        }
+    }
+   /*// Example to show the output after content is ready
+const outputElement = document.querySelector('.output');
+
+// Add content dynamically
+outputElement.textContent = "";
+
+// After content is set, make it visible and trigger the animation
+outputElement.classList.add('show');*/
+
+
+    async function startSentence(sentence) {
+        let outputDiv = document.getElementById('output');
+
+        for (let i = 0; i < sentence.length; i++) {
+            if (sentence[i] === " ") {
+                store += " "; // Add space if the target letter is a space
+                outputDiv.innerText = store;
+            } else {
+                await matchLetter(sentence[i]); // Find and display the correct letter
+            }
+        }
+    }
+
+    async function eraseSentence() {
+        let outputDiv = document.getElementById('output');
+        
+        while (store.length > 0) {
+            store = store.slice(0, -1); // Remove the last character
+            outputDiv.innerText = store; // Update the display with the reduced string
+            await sleep(eraseDelay); // Delay to simulate backspace effect
+        }
+    }
+
+    async function startProcess() {
+        let outputDiv = document.getElementById('output');
+        
+        // Go through each sentence
+        for (let sentence of sentences) {
+            store = ""; // Clear the store for the new sentence
+            await startSentence(sentence); // Process the current sentence
+
+            // Delay after completing one sentence before erasing
+            await sleep(1000);
+            await eraseSentence(); // Erase the sentence one letter at a time
+        }
+
+        // Restart the process once all sentences are processed
+        startProcess(); // Recursively call to make it continuous
+    }
+
+    // Automatically start the process when the page loads
+    window.onload = async function() {
+        await startProcess();
+    };
+
+    // Show the button after scrolling down 100px
+    window.onscroll = function () {
+                    const scrollToTopButton = document.getElementById("scrollToTop");
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                      scrollToTopButton.style.display = "flex"; // Use "flex" for proper alignment
+                    } else {
+                      scrollToTopButton.style.display = "none";
+                    }
+                  };
+                  
+                  // Scroll to top when the button is clicked
+                  document.getElementById("scrollToTop").onclick = function () {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  };
+                  document.getElementById("game-space-btn").addEventListener("click", function() {
+                window.location.href = "https://vivekx11.github.io/GameSpace/";  // Replace with your URL
+              });
+              document.getElementById("game-space-btn").addEventListener("click", function() {
+    window.location.href = "https://viveks2907.github.io/WT.frontend./";  // Replace with your URL
+  });
+  document.getElementById("game-space-btn").addEventListener("click", function() {
+    window.location.href = "https://vivekx11.github.io/memorygame/";  // Replace with your URL
+  });
+
+</script>
+</html>
